@@ -23,9 +23,9 @@ class _NinjaCardState extends State<NinjaCard> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // setState(() {
-          //   level++;
-          // });
+          setState(() {
+            level++;
+          });
         },
         child: Icon(Icons.add),
         backgroundColor: Colors.blueAccent,
@@ -62,17 +62,22 @@ class _NinjaCardState extends State<NinjaCard> {
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                   )),
-              SizedBox(
-                height: 20.0,
+              // SizedBox(
+              //   height: 20.0,
+              // ),
+              Container(
+                //padding: EdgeInsets.all(30.0),
+                margin: EdgeInsets.only(top: 20.0, bottom: 10.0),
+                child: Text('Current Level',
+                    style: TextStyle(
+                      color: Colors.white,
+                      letterSpacing: 2.0,
+                      fontSize: 15.0,
+                    )),
               ),
-              Text('Current Level',
-                  style: TextStyle(
-                    color: Colors.white,
-                    letterSpacing: 2.0,
-                  )),
-              SizedBox(
-                height: 10.0,
-              ),
+              // SizedBox(
+              //   height: 10.0,
+              // ),
               Row(children: <Widget>[
                 Icon(
                   Icons.leaderboard,
@@ -89,6 +94,11 @@ class _NinjaCardState extends State<NinjaCard> {
                       fontWeight: FontWeight.bold,
                     )),
               ]),
+              Container(
+                padding: EdgeInsets.all(30.0),
+                //color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 30.0, horizontal: 20.0),
+              ),
             ]),
       ),
     );

@@ -59,7 +59,7 @@ class NinjaCard extends StatelessWidget {
               ),
               Row(children: <Widget>[
                 Icon(
-                  Icons.email,
+                  Icons.leaderboard,
                   color: Colors.white,
                 ),
                 SizedBox(
